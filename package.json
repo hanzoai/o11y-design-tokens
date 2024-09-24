@@ -1,0 +1,28 @@
+{
+  "name": "@signoz/design-tokens",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/design-tokens.js",
+  "module": "./dist/design-tokens.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rm -rf dist node_modules",
+    "update-version": "changeset && changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.8",
+    "@types/node": "^22.5.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
