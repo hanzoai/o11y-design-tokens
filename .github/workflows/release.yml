@@ -6,7 +6,7 @@ on:
       - "design-tokens-initial-setup"
 
 jobs:
-  test:
+  release:
     uses: signoz/primus.workflows/.github/workflows/js-release.yaml@js-release
     secrets: inherit
     with:
