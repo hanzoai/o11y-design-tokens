@@ -10,4 +10,4 @@ jobs:
     uses: signoz/primus.workflows/.github/workflows/js-release.yaml@js-release
     secrets: inherit
     with:
-      PRIMUS_REF: main
+      PRIMUS_REF: git
