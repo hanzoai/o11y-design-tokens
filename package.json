@@ -1,6 +1,6 @@
 {
   "name": "@signoz/design-tokens",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/design-tokens.js",
   "module": "./dist/design-tokens.js",

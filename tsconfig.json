@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "React Library",
+  "display": "SigNoz Design Tokens",
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {

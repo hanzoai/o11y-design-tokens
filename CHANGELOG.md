@@ -1,7 +1,7 @@
 # @signoz/design-tokens
 
-## 0.0.1
+## 1.0.0
 
-### Patch Changes
+### Major Changes
 
-- Design tokens initial setup
+- Signoz Design Tokens first release
