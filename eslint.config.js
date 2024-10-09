@@ -18,6 +18,15 @@ export default [
 				ecmaVersion: 'latest',
 				sourceType: 'module',
 			},
+			globals: {
+				// Add Node.js globals here
+				console: 'readonly',
+				process: 'readonly',
+				module: 'readonly',
+				require: 'readonly',
+				__dirname: 'readonly',
+				__filename: 'readonly',
+			},
 		},
 		rules: {
 			...tsPlugin.configs.recommended.rules,

@@ -1,0 +1,90 @@
+{
+	"fontSize": {
+		"xs": {
+			"value": "0.75rem",
+			"type": "typography"
+		},
+		"sm": {
+			"value": "0.875rem",
+			"type": "typography"
+		},
+		"lg": {
+			"value": "1.125rem",
+			"type": "typography"
+		},
+		"xl": {
+			"value": "1.25rem",
+			"type": "typography"
+		},
+		"2xl": {
+			"value": "1.5rem",
+			"type": "typography"
+		},
+		"3xl": {
+			"value": "1.875rem",
+			"type": "typography"
+		},
+		"4xl": {
+			"value": "2.25rem",
+			"type": "typography"
+		},
+		"5xl": {
+			"value": "3rem",
+			"type": "typography"
+		},
+		"6xl": {
+			"value": "3.75rem",
+			"type": "typography"
+		},
+		"7xl": {
+			"value": "4.5rem",
+			"type": "typography"
+		},
+		"8xl": {
+			"value": "6rem",
+			"type": "typography"
+		},
+		"9xl": {
+			"value": "8rem",
+			"type": "typography"
+		}
+	},
+	"fontWeight": {
+		"thin": {
+			"value": "100",
+			"type": "typography"
+		},
+		"extralight": {
+			"value": "200",
+			"type": "typography"
+		},
+		"light": {
+			"value": "300",
+			"type": "typography"
+		},
+		"normal": {
+			"value": "400",
+			"type": "typography"
+		},
+		"medium": {
+			"value": "500",
+			"type": "typography"
+		},
+		"semibold": {
+			"value": "600",
+			"type": "typography"
+		},
+		"bold": {
+			"value": "700",
+			"type": "typography"
+		},
+		"extrabold": {
+			"value": "800",
+			"type": "typography"
+		},
+		"black": {
+			"value": "900",
+			"type": "typography"
+		}
+	}
+}

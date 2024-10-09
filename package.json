@@ -17,7 +17,8 @@
 		"prepare": "husky install",
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx --config eslint.config.js",
 		"format": "prettier --write .",
-		"pre-commit": "lint-staged"
+		"pre-commit": "lint-staged",
+		"generate-tokens": "tsx ./scripts/generate-types-from-json.ts && style-dictionary build"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
@@ -32,16 +33,18 @@
 		"@changesets/cli": "^2.27.8",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
-		"@types/node": "^22.5.5",
 		"@eslint/js": "^8.0.0",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint": "^9.11.1",
+		"@types/node": "^22.5.5",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"eslint": "^9.12.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"husky": "^8.0.0",
 		"lint-staged": "^15.2.10",
 		"prettier": "^3.0.0",
+		"style-dictionary": "3.8.0",
+		"tsx": "^4.19.1",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.0",
 		"vite-plugin-dts": "^3.0.0"
