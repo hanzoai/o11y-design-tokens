@@ -1,0 +1,44 @@
+{
+	"source": ["src/tokens/*.json"],
+	"platforms": {
+		"css_colors": {
+			"transformGroup": "css",
+			"buildPath": "src/Colors/",
+			"files": [
+				{
+					"destination": "_colors.css",
+					"format": "css/variables",
+					"filter": {
+						"type": "color"
+					}
+				}
+			]
+		},
+		"css_spacings": {
+			"transformGroup": "css",
+			"buildPath": "src/Spacing/",
+			"files": [
+				{
+					"destination": "_spacing.css",
+					"format": "css/variables",
+					"filter": {
+						"type": "spacing"
+					}
+				}
+			]
+		},
+		"css_typography": {
+			"transformGroup": "css",
+			"buildPath": "src/Typography/",
+			"files": [
+				{
+					"destination": "_colors.css",
+					"format": "css/variables",
+					"filter": {
+						"type": "typography"
+					}
+				}
+			]
+		}
+	}
+}
