@@ -12,6 +12,7 @@
 		"composite": false,
 		"declaration": true,
 		"declarationMap": true,
+		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
