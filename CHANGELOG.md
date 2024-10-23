@@ -24,6 +24,18 @@
 
 - fix the issue for consumers (unable to find type declarations)
 
+## 1.1.2
+
+### Patch Changes
+
+- extract design tokens json files
+
+## 1.1.1
+
+### Patch Changes
+
+- fix the issue for consumers (unable to find type declarations)
+
 ## 1.1.1
 
 ### Patch Changes
