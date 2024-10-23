@@ -6,11 +6,15 @@
 			"buildPath": "src/Colors/",
 			"files": [
 				{
-					"destination": "_colors.css",
+					"destination": "style.css",
 					"format": "css/variables",
 					"filter": {
 						"type": "color"
 					}
+				},
+				{
+					"destination": "../style.css",
+					"format": "css/variables"
 				}
 			]
 		},
@@ -19,11 +23,15 @@
 			"buildPath": "src/Spacing/",
 			"files": [
 				{
-					"destination": "_spacing.css",
+					"destination": "style.css",
 					"format": "css/variables",
 					"filter": {
 						"type": "spacing"
 					}
+				},
+				{
+					"destination": "../style.css",
+					"format": "css/variables"
 				}
 			]
 		},
@@ -32,11 +40,15 @@
 			"buildPath": "src/Typography/",
 			"files": [
 				{
-					"destination": "_colors.css",
+					"destination": "style.css",
 					"format": "css/variables",
 					"filter": {
 						"type": "typography"
 					}
+				},
+				{
+					"destination": "../style.css",
+					"format": "css/variables"
 				}
 			]
 		}
