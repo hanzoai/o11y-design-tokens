@@ -1,5 +1,11 @@
 # @signoz/design-tokens
 
+## 1.1.2
+
+### Patch Changes
+
+- extract design tokens json files
+
 ## 1.1.1
 
 ### Patch Changes
