@@ -1,5 +1,11 @@
 # @signoz/design-tokens
 
+## 1.1.1
+
+### Patch Changes
+
+- fix the issue for consumers (unable to find type declarations)
+
 ## 1.1.0
 
 ### Minor Changes
