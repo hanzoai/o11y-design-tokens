@@ -1,5 +1,11 @@
 # @signoz/design-tokens
 
+## 1.1.3
+
+### Patch Changes
+
+- design tokens backward compatibility
+
 ## 1.1.2
 
 ### Patch Changes
