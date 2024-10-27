@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Oct 2024 16:48:37 GMT
+ * Generated on Sun, 27 Oct 2024 10:13:39 GMT
  */
 
 export const Spacing = {
@@ -40,8 +40,6 @@ export const Spacing = {
 	MARGIN_48: '12rem',
 	MARGIN_56: '14rem',
 	MARGIN_64: '16rem',
-} as const;
-
-export type SpacingType = {
-	[key: string]: string;
 };
+
+export type SpacingType = (typeof Spacing)[keyof typeof Spacing];

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Oct 2024 16:48:37 GMT
+ * Generated on Sun, 27 Oct 2024 10:13:39 GMT
  */
 
 export const ColorTailwind = {
@@ -68,8 +68,7 @@ export const ColorTailwind = {
 	'forest-400': '#51E7A8',
 	'forest-500': '#25E192',
 	'forest-600': '#1EB475',
-} as const;
-
-export type ColorTailwindType = {
-	[key: string]: string;
 };
+
+export type ColorTailwindType =
+	(typeof ColorTailwind)[keyof typeof ColorTailwind];
