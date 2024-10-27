@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Oct 2024 16:48:37 GMT
+ * Generated on Sun, 27 Oct 2024 10:29:22 GMT
  */
 
 export const Color = {
@@ -130,8 +130,6 @@ export const Color = {
 	TEXT_FOREST_400: '#51E7A8',
 	TEXT_FOREST_500: '#25E192',
 	TEXT_FOREST_600: '#1EB475',
-} as const;
-
-export type ColorType = {
-	[key: string]: string;
 };
+
+export type ColorType = (typeof Color)[keyof typeof Color];

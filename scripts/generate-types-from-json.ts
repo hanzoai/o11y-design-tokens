@@ -57,11 +57,9 @@ const generateTypeFile = async (config: {
  * Generated on ${new Date().toUTCString()}
  */
 		
-      export const ${enumName} = ${JSON.stringify(enumObject, null, 2)} as const;
+      export const ${enumName} = ${JSON.stringify(enumObject, null, 2)} ;
 
-	  export type ${enumName}Type = {
-	[key: string]: string;
-};
+	  export type ${enumName}Type = (typeof ${enumName})[keyof typeof ${enumName}];
     `.trim();
 		await fs.writeFile(outputPath, fileContent);
 		console.log(`${outputPath} generated successfully`);
