@@ -1,5 +1,11 @@
 # @signoz/design-tokens
 
+## 1.1.4
+
+### Patch Changes
+
+- improve backward compatibility to fix the failing build
+
 ## 1.1.3
 
 ### Patch Changes
