@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Oct 2024 16:48:37 GMT
+ * Generated on Sun, 27 Oct 2024 10:29:22 GMT
  */
 
 export const Typography = {
@@ -25,8 +25,6 @@ export const Typography = {
 	FONTWEIGHT_BOLD: '700',
 	FONTWEIGHT_EXTRABOLD: '800',
 	FONTWEIGHT_BLACK: '900',
-} as const;
-
-export type TypographyType = {
-	[key: string]: string;
 };
+
+export type TypographyType = (typeof Typography)[keyof typeof Typography];
