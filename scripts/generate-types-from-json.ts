@@ -39,6 +39,24 @@ const generateTailwindEnum = (
 	return finalObj;
 };
 
+const generateTailwindCSS = (
+	obj: object | null,
+	parent = '',
+	finalObj: Record<string, string> = {},
+) => {
+	if (obj === null) return finalObj;
+	Object.entries(obj).forEach(([key, value]) => {
+		if (typeof value === 'object' && value !== null) {
+			const currentKey = parent ? `${parent}-${key}` : key;
+			generateTailwindCSS(value, currentKey, finalObj);
+		} else if (key === 'value' && typeof value === 'string') {
+			const cleanedParent = parent.toLowerCase().replace(/^(bg|text)-/, '');
+			finalObj[cleanedParent] = value;
+		}
+	});
+	return finalObj;
+};
+
 const generateTypeFile = async (config: {
 	inputPath: string;
 	outputPath: string;
@@ -72,35 +90,72 @@ const generateTypeFile = async (config: {
 	}
 };
 
-const configs = [
+const generateTailwindThemeFile = async (configs: typeof configsWithTheme) => {
+	try {
+		let themeContent = `
+/**
+ * Do not edit directly
+ * Generated on ${new Date().toUTCString()}
+ */
+@theme {`;
+
+		for (const config of configs) {
+			const jsonData = JSON.parse(await fs.readFile(config.inputPath, 'utf-8'));
+			const variables = generateTailwindCSS(jsonData);
+
+			// Group variables by type (colors, spacing, typography)
+			themeContent += `\n  /* ${config.enumName} */\n`;
+			Object.entries(variables).forEach(([key, value]) => {
+				themeContent += `  --${config.prefix}-${key}: ${value};\n`;
+			});
+		}
+
+		themeContent += `}\n`;
+
+		await fs.writeFile(
+			join(__dirname, '../src/tailwind-theme.css'),
+			themeContent,
+		);
+		console.log('tailwind-theme.css generated successfully');
+	} catch (error: unknown) {
+		if (error instanceof Error) {
+			console.error(`Error generating tailwind-theme.css: ${error.message}`);
+		} else {
+			console.error(`Error generating tailwind-theme.css: Unexpected error`);
+		}
+	}
+};
+
+const configsWithTheme = [
 	{
 		inputPath: join(__dirname, '../src/tokens/color.json'),
-		outputPath: join(__dirname, '../src/Colors/Color.ts'),
-		enumName: 'Color',
-		isTailwind: false,
-	},
-	{
-		inputPath: join(__dirname, '../src/tokens/color.json'),
-		outputPath: join(__dirname, '../src/Colors/ColorTailwind.ts'),
-		enumName: 'ColorTailwind',
+		outputPath: join(__dirname, '../src/types/colors.ts'),
+		enumName: 'colors',
 		isTailwind: true,
+		prefix: 'color',
 	},
 	{
 		inputPath: join(__dirname, '../src/tokens/spacing.json'),
-		outputPath: join(__dirname, '../src/Spacing/Spacing.ts'),
-		enumName: 'Spacing',
+		outputPath: join(__dirname, '../src/types/spacing.ts'),
+		enumName: 'spacing',
 		isTailwind: false,
+		prefix: 'spacing',
 	},
 	{
 		inputPath: join(__dirname, '../src/tokens/typography.json'),
-		outputPath: join(__dirname, '../src/Typography/Typography.ts'),
-		enumName: 'Typography',
+		outputPath: join(__dirname, '../src/types/typography.ts'),
+		enumName: 'typography',
 		isTailwind: false,
+		prefix: 'text',
 	},
 ];
 
 (async () => {
-	for (const config of configs) {
+	// Generate TypeScript types
+	for (const config of configsWithTheme) {
 		await generateTypeFile(config);
 	}
+
+	// Generate Tailwind theme CSS
+	await generateTailwindThemeFile(configsWithTheme);
 })();

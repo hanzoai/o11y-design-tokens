@@ -5,6 +5,20 @@ import postcss from 'postcss';
 import fs from 'fs';
 import cssnano from 'cssnano';
 
+const processCSSFile = (inputPath: string, outputPath: string) => {
+	fs.readFile(inputPath, (err, css) => {
+		if (err) throw err;
+		postcss([cssnano({ preset: 'default' })])
+			.process(css, { from: inputPath, to: outputPath })
+			.then((result) => {
+				fs.writeFile(outputPath, result.css, () => true);
+				if (result.map) {
+					fs.writeFile(outputPath + '.map', result.map.toString(), () => true);
+				}
+			});
+	});
+};
+
 export default defineConfig({
 	build: {
 		lib: {
@@ -25,30 +39,15 @@ export default defineConfig({
 		{
 			name: 'copy-css',
 			writeBundle() {
-				// Process the CSS file with PostCSS before copying
-
-				const cssFilePath = resolve(__dirname, 'src/style.css');
-				const outputFilePath = resolve(__dirname, 'dist/style.css');
-
-				// Read the CSS file
-				fs.readFile(cssFilePath, (err, css) => {
-					if (err) throw err;
-
-					// Process the CSS with PostCSS
-					postcss([cssnano({ preset: 'default' })])
-						.process(css, { from: cssFilePath, to: outputFilePath })
-						.then((result) => {
-							// Write the minified CSS to the dist folder
-							fs.writeFile(outputFilePath, result.css, () => true);
-							if (result.map) {
-								fs.writeFile(
-									outputFilePath + '.map',
-									result.map.toString(),
-									() => true,
-								);
-							}
-						});
-				});
+				// Process both CSS files
+				processCSSFile(
+					resolve(__dirname, 'src/style.css'),
+					resolve(__dirname, 'dist/style.css'),
+				);
+				processCSSFile(
+					resolve(__dirname, 'src/tailwind-theme.css'),
+					resolve(__dirname, 'dist/tailwind-theme.css'),
+				);
 			},
 		},
 	],
