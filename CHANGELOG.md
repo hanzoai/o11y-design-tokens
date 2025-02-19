@@ -1,5 +1,11 @@
 # @signoz/design-tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- added support for generating tailwind theme tokens i.e. @theme { ... }
+
 ## 1.1.4
 
 ### Patch Changes
