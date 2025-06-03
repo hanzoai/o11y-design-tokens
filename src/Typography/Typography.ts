@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 27 Oct 2024 10:29:22 GMT
+ * Generated on Tue, 03 Jun 2025 04:55:28 GMT
  */
 
 export const Typography = {
