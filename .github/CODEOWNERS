@@ -1,7 +1,7 @@
-vite.config.ts @ahmadshaheer
-tsconfig.json @ahmadshaheer
-package.json @ahmadshaheer
-.changeset @ahmadshaheer
-.github @ahmadshaheer
-README.md @ahmadshaheer
-src @ahmadshaheer
+vite.config.ts @SigNoz/frontend 
+tsconfig.json @SigNoz/frontend 
+package.json @SigNoz/frontend 
+.changeset @SigNoz/frontend 
+.github @SigNoz/frontend 
+README.md @SigNoz/frontend 
+src @SigNoz/frontend 
