@@ -150,7 +150,99 @@ const configsWithTheme = [
 	},
 ];
 
+// Generate Color.ts and ColorTailwind.ts from color.json
+const generateColorFiles = async () => {
+	try {
+		const colorJsonPath = join(__dirname, '../src/tokens/color.json');
+		const jsonData = JSON.parse(await fs.readFile(colorJsonPath, 'utf-8'));
+
+		// Generate Color.ts (with BG_ and TEXT_ prefixes)
+		const colorEnum = generateEnum(jsonData);
+		const colorFileContent = `
+/**
+ * Do not edit directly
+ * Generated on ${new Date().toUTCString()}
+ */
+
+export const Color = ${JSON.stringify(colorEnum, null, '\t')};
+
+export type ColorType = (typeof Color)[keyof typeof Color];
+`.trim();
+
+		await fs.writeFile(
+			join(__dirname, '../src/Colors/Color.ts'),
+			colorFileContent,
+		);
+		console.log('src/Colors/Color.ts generated successfully');
+
+		// Generate ColorTailwind.ts (kebab-case, lowercase)
+		const tailwindEnum = generateTailwindEnum(jsonData);
+		const tailwindFileContent = `
+/**
+ * Do not edit directly
+ * Generated on ${new Date().toUTCString()}
+ */
+
+export const ColorTailwind = ${JSON.stringify(tailwindEnum, null, '\t')};
+
+export type ColorTailwindType =
+	(typeof ColorTailwind)[keyof typeof ColorTailwind];
+`.trim();
+
+		await fs.writeFile(
+			join(__dirname, '../src/Colors/ColorTailwind.ts'),
+			tailwindFileContent,
+		);
+		console.log('src/Colors/ColorTailwind.ts generated successfully');
+	} catch (error: unknown) {
+		if (error instanceof Error) {
+			console.error(`Error generating color files: ${error.message}`);
+		} else {
+			console.error(`Error generating color files: Unexpected error`);
+		}
+	}
+};
+
+// Generate Typography.ts from typography.json
+const generateTypographyFile = async () => {
+	try {
+		const typographyJsonPath = join(__dirname, '../src/tokens/typography.json');
+		const jsonData = JSON.parse(await fs.readFile(typographyJsonPath, 'utf-8'));
+
+		// Generate Typography.ts (with all typography tokens)
+		const typographyEnum = generateEnum(jsonData);
+		const typographyFileContent = `
+/**
+ * Do not edit directly
+ * Generated on ${new Date().toUTCString()}
+ */
+
+export const Typography = ${JSON.stringify(typographyEnum, null, '\t')};
+
+export type TypographyType = (typeof Typography)[keyof typeof Typography];
+`.trim();
+
+		await fs.writeFile(
+			join(__dirname, '../src/Typography/Typography.ts'),
+			typographyFileContent,
+		);
+		console.log('src/Typography/Typography.ts generated successfully');
+	} catch (error: unknown) {
+		if (error instanceof Error) {
+			console.error(`Error generating typography file: ${error.message}`);
+		} else {
+			console.error(`Error generating typography file: Unexpected error`);
+		}
+	}
+};
+
 (async () => {
+	// Generate Color.ts and ColorTailwind.ts
+	await generateColorFiles();
+
+	// Generate Typography.ts
+	await generateTypographyFile();
+
 	// Generate TypeScript types
 	for (const config of configsWithTheme) {
 		await generateTypeFile(config);
