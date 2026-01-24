@@ -3,7 +3,7 @@
  * Generated on Sat, 24 Jan 2026 12:23:24 GMT
  */
 
-export const ColorTailwind = {
+export const Colors = {
 	'robin-50': '#edf1fe',
 	'robin-100': '#cad5fd',
 	'robin-150': '#cad5fd',
@@ -145,5 +145,4 @@ export const ColorTailwind = {
 		'linear-gradient(92deg, #CA9CD0 1.36%, #D38972 68.48%, #A1B1E7 98.99%)',
 };
 
-export type ColorTailwindType =
-	(typeof ColorTailwind)[keyof typeof ColorTailwind];
+export type ColorsType = (typeof Colors)[keyof typeof Colors];

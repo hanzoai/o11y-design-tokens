@@ -1,5 +1,9 @@
 {
-	"source": ["src/tokens/*.json"],
+	"source": [
+		"src/tokens/color.json",
+		"src/tokens/spacing.json",
+		"src/tokens/typography.json"
+	],
 	"platforms": {
 		"css_colors": {
 			"transformGroup": "css",

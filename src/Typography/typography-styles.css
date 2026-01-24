@@ -1,0 +1,292 @@
+/**
+ * Typography Styles
+ * DO NOT EDIT DIRECTLY - This file is auto-generated
+ * Generated on Sat, 24 Jan 2026 12:23:24 GMT
+ *
+ * These classes apply complete typography styles including:
+ * font-family, font-size, font-weight, line-height, letter-spacing
+ *
+ * Usage in HTML:
+ * <p class="typography-paragraph-medium-400">Your text here</p>
+ *
+ * Usage in CSS:
+ * .my-element {
+ *   @apply typography-label-base-600;
+ * }
+ */
+
+.typography-label-large-400 {
+	font-family: Inter, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-large-500 {
+	font-family: Inter, sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-large-600 {
+	font-family: Inter, sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-medium-400 {
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-medium-500 {
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-medium-600 {
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-base-400 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -0.5px;
+}
+
+.typography-label-base-500 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.5px;
+}
+
+.typography-label-base-600 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: -0.5px;
+}
+
+.typography-label-small-400 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-small-500 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-label-small-600 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-uppercase-base-400 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.typography-uppercase-base-500 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.typography-uppercase-base-600 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.typography-uppercase-small-400 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.typography-uppercase-small-500 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.typography-uppercase-small-600 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.typography-code-base-400 {
+	font-family:
+		SF Mono,
+		monospace;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-code-base-500 {
+	font-family:
+		SF Mono,
+		monospace;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-code-base-600 {
+	font-family:
+		SF Mono,
+		monospace;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-code-small-400 {
+	font-family:
+		SF Mono,
+		monospace;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-code-small-500 {
+	font-family:
+		SF Mono,
+		monospace;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-code-small-600 {
+	font-family:
+		SF Mono,
+		monospace;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0px;
+}
+
+.typography-paragraph-medium-400 {
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0px;
+}
+
+.typography-paragraph-medium-500 {
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0px;
+}
+
+.typography-paragraph-medium-600 {
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0px;
+}
+
+.typography-paragraph-base-400 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: -0.5px;
+}
+
+.typography-paragraph-base-500 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: -0.5px;
+}
+
+.typography-paragraph-base-600 {
+	font-family: Inter, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: -0.5px;
+}
+
+.typography-paragraph-small-400 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: -0.5px;
+}
+
+.typography-paragraph-small-500 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: -0.5px;
+}
+
+.typography-paragraph-small-600 {
+	font-family: Inter, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 18px;
+	letter-spacing: -0.5px;
+}
