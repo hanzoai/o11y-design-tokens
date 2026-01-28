@@ -8,6 +8,13 @@ import cssnano from 'cssnano';
 const processCSSFile = (inputPath: string, outputPath: string) => {
 	fs.readFile(inputPath, (err, css) => {
 		if (err) throw err;
+
+		// Ensure output directory exists
+		const outputDir = resolve(outputPath, '..');
+		if (!fs.existsSync(outputDir)) {
+			fs.mkdirSync(outputDir, { recursive: true });
+		}
+
 		postcss([cssnano({ preset: 'default' })])
 			.process(css, { from: inputPath, to: outputPath })
 			.then((result) => {
@@ -47,6 +54,14 @@ export default defineConfig({
 				processCSSFile(
 					resolve(__dirname, 'src/tailwind-theme.css'),
 					resolve(__dirname, 'dist/tailwind-theme.css'),
+				);
+				processCSSFile(
+					resolve(__dirname, 'src/themes/signoz-tokens.css'),
+					resolve(__dirname, 'dist/themes/signoz-tokens.css'),
+				);
+				processCSSFile(
+					resolve(__dirname, 'src/Typography/typography-styles.css'),
+					resolve(__dirname, 'dist/Typography/typography-styles.css'),
 				);
 			},
 		},

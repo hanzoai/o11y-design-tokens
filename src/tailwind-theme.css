@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Thu, 04 Dec 2025 11:00:53 GMT
+ * Generated on Sat, 24 Jan 2026 12:23:24 GMT
  */
 @theme {
-	/* colors */
+	/* Colors */
 	--color-robin-50: #edf1fe;
 	--color-robin-100: #cad5fd;
 	--color-robin-150: #cad5fd;
@@ -158,7 +158,7 @@
 		#a1b1e7 98.99%
 	);
 
-	/* spacing */
+	/* Spacing */
 	--spacing-padding-1: 0.25rem;
 	--spacing-padding-2: 0.5rem;
 	--spacing-padding-3: 0.75rem;
@@ -196,7 +196,7 @@
 	--spacing-margin-56: 14rem;
 	--spacing-margin-64: 16rem;
 
-	/* typography */
+	/* Typography */
 	--text-fontfamily-inter: Inter, sans-serif;
 	--text-fontfamily-sfmono: SF Mono, monospace;
 	--text-fontsize-xs: 0.75rem;

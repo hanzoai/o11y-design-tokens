@@ -129,22 +129,22 @@ const generateTailwindThemeFile = async (configs: typeof configsWithTheme) => {
 const configsWithTheme = [
 	{
 		inputPath: join(__dirname, '../src/tokens/color.json'),
-		outputPath: join(__dirname, '../src/types/colors.ts'),
-		enumName: 'colors',
+		outputPath: join(__dirname, '../src/types/Colors.ts'),
+		enumName: 'Colors',
 		isTailwind: true,
 		prefix: 'color',
 	},
 	{
 		inputPath: join(__dirname, '../src/tokens/spacing.json'),
-		outputPath: join(__dirname, '../src/types/spacing.ts'),
-		enumName: 'spacing',
+		outputPath: join(__dirname, '../src/types/Spacing.ts'),
+		enumName: 'Spacing',
 		isTailwind: false,
 		prefix: 'spacing',
 	},
 	{
 		inputPath: join(__dirname, '../src/tokens/typography.json'),
-		outputPath: join(__dirname, '../src/types/typography.ts'),
-		enumName: 'typography',
+		outputPath: join(__dirname, '../src/types/Typography.ts'),
+		enumName: 'Typography',
 		isTailwind: false,
 		prefix: 'text',
 	},
