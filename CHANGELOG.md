@@ -1,5 +1,11 @@
 # @signoz/design-tokens
 
+## 2.1.1
+
+### Patch Changes
+
+- added spacing variables from figma table
+
 ## 2.1.0
 
 ### Minor Changes
