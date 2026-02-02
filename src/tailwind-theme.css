@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 24 Jan 2026 12:23:24 GMT
+ * Generated on Mon, 02 Feb 2026 06:36:24 GMT
  */
 @theme {
 	/* Colors */
@@ -195,6 +195,25 @@
 	--spacing-margin-48: 12rem;
 	--spacing-margin-56: 14rem;
 	--spacing-margin-64: 16rem;
+	--spacing-spacing-0: 0px;
+	--spacing-spacing-1: 2px;
+	--spacing-spacing-2: 4px;
+	--spacing-spacing-3: 6px;
+	--spacing-spacing-4: 8px;
+	--spacing-spacing-5: 10px;
+	--spacing-spacing-6: 12px;
+	--spacing-spacing-7: 14px;
+	--spacing-spacing-8: 16px;
+	--spacing-spacing-10: 20px;
+	--spacing-spacing-12: 24px;
+	--spacing-spacing-16: 32px;
+	--spacing-spacing-20: 40px;
+	--spacing-spacing-24: 48px;
+	--spacing-spacing-32: 64px;
+	--spacing-spacing-40: 80px;
+	--spacing-spacing-48: 96px;
+	--spacing-spacing-56: 112px;
+	--spacing-spacing-64: 128px;
 
 	/* Typography */
 	--text-fontfamily-inter: Inter, sans-serif;

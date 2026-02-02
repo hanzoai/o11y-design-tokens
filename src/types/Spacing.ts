@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 24 Jan 2026 12:23:24 GMT
+ * Generated on Mon, 02 Feb 2026 06:36:24 GMT
  */
 
 export const Spacing = {
@@ -40,6 +40,25 @@ export const Spacing = {
 	MARGIN_48: '12rem',
 	MARGIN_56: '14rem',
 	MARGIN_64: '16rem',
+	SPACING_0: '0px',
+	SPACING_1: '2px',
+	SPACING_2: '4px',
+	SPACING_3: '6px',
+	SPACING_4: '8px',
+	SPACING_5: '10px',
+	SPACING_6: '12px',
+	SPACING_7: '14px',
+	SPACING_8: '16px',
+	SPACING_10: '20px',
+	SPACING_12: '24px',
+	SPACING_16: '32px',
+	SPACING_20: '40px',
+	SPACING_24: '48px',
+	SPACING_32: '64px',
+	SPACING_40: '80px',
+	SPACING_48: '96px',
+	SPACING_56: '112px',
+	SPACING_64: '128px',
 };
 
 export type SpacingType = (typeof Spacing)[keyof typeof Spacing];
