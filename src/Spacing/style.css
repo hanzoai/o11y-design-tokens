@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 24 Jan 2026 12:23:24 GMT
+ * Generated on Mon, 02 Feb 2026 06:36:25 GMT
  */
 
 :root {
@@ -40,4 +40,23 @@
 	--margin-48: 12rem;
 	--margin-56: 14rem;
 	--margin-64: 16rem;
+	--spacing-0: 0px;
+	--spacing-1: 2px;
+	--spacing-2: 4px;
+	--spacing-3: 6px;
+	--spacing-4: 8px;
+	--spacing-5: 10px;
+	--spacing-6: 12px;
+	--spacing-7: 14px;
+	--spacing-8: 16px;
+	--spacing-10: 20px;
+	--spacing-12: 24px;
+	--spacing-16: 32px;
+	--spacing-20: 40px;
+	--spacing-24: 48px;
+	--spacing-32: 64px;
+	--spacing-40: 80px;
+	--spacing-48: 96px;
+	--spacing-56: 112px;
+	--spacing-64: 128px;
 }

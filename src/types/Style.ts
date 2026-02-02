@@ -1,7 +1,7 @@
 /**
  * Semantic Token Constants
  * DO NOT EDIT DIRECTLY - This file is auto-generated
- * Generated on Sat, 24 Jan 2026 12:23:24 GMT
+ * Generated on Mon, 02 Feb 2026 06:36:25 GMT
  */
 
 export const Style = {
