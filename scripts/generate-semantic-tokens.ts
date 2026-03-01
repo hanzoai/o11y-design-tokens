@@ -18,12 +18,23 @@ const __dirname = dirname(__filename);
 /**
  * Type definition for semantic token JSON structure
  */
+interface TokenWithMetadata {
+	value: string;
+	description?: string;
+	usage?: string;
+	dontUse?: string;
+	category?: string;
+	group?: string;
+}
+
+type TokenValue = string | TokenWithMetadata;
+
 interface ThemeMode {
 	meta: {
 		'color-scheme': 'light' | 'dark';
 		selector?: string;
 	};
-	tokens: Record<string, string>;
+	tokens: Record<string, TokenValue>;
 }
 
 interface SemanticTokens {
@@ -33,18 +44,22 @@ interface SemanticTokens {
 	};
 }
 
+function getTokenValue(token: TokenValue): string {
+	return typeof token === 'string' ? token : token.value;
+}
+
 /**
  * Convert tokens object to CSS variable format
  * Tokens are already in var(--...) format, just need to add -- prefix to keys
  */
 function convertTokensToCSSFormat(
-	tokens: Record<string, string>,
+	tokens: Record<string, TokenValue>,
 ): Record<string, string> {
 	const cssTokens: Record<string, string> = {};
 
-	for (const [key, value] of Object.entries(tokens)) {
+	for (const [key, token] of Object.entries(tokens)) {
 		const cssKey = `--${key}`;
-		cssTokens[cssKey] = value;
+		cssTokens[cssKey] = getTokenValue(token);
 	}
 
 	return cssTokens;
@@ -134,7 +149,7 @@ ${darkBlock}
 /**
  * Generate TypeScript definitions for tokens
  */
-function generateStyleDefinitions(tokens: Record<string, string>): string {
+function generateStyleDefinitions(tokens: Record<string, TokenValue>): string {
 	const timestamp = new Date().toUTCString();
 
 	const styleEntries = Object.entries(tokens).map(([key]) => {
@@ -162,7 +177,7 @@ export type StyleType = typeof Style;
  * Generate Tailwind config definitions for tokens
  */
 function generateStyleTailwindDefinitions(
-	tokens: Record<string, string>,
+	tokens: Record<string, TokenValue>,
 ): string {
 	const timestamp = new Date().toUTCString();
 

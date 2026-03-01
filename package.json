@@ -15,7 +15,7 @@
 		"update-version": "changeset && changeset version",
 		"release": "pnpm build && changeset publish",
 		"prepare": "husky install",
-		"lint": "eslint . --ext .js,.jsx,.ts,.tsx --config eslint.config.js",
+		"lint": "eslint . --config eslint.config.js",
 		"format": "prettier --write .",
 		"pre-commit": "lint-staged",
 		"generate-tokens": "tsx ./scripts/generate-types-from-json.ts && style-dictionary build && tsx ./scripts/generate-semantic-tokens.ts && tsx ./scripts/generate-typography-styles.ts"

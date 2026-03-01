@@ -9,3 +9,4 @@ export { default as colorTokens } from './tokens/color.json';
 export { default as spacingTokens } from './tokens/spacing.json';
 export { default as typographyTokens } from './tokens/typography.json';
 export { default as typographyStylesTokens } from './tokens/typography-styles.json';
+export { default as semanticTokens } from './tokens/semantic-tokens.json';
