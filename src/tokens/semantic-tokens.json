@@ -991,7 +991,7 @@
 					"group": "surface-levels"
 				},
 				"l2-background": {
-					"value": "var(--bg-neutral-dark-900)",
+					"value": "var(--bg-neutral-dark-950)",
 					"description": "Secondary background for cards and elevated surfaces",
 					"usage": "Use for cards, panels, sidebars, and first-level nested containers",
 					"dontUse": "Avoid for deeply nested elements - use l3 instead",
@@ -1113,7 +1113,7 @@
 					"group": "actions"
 				},
 				"secondary-background": {
-					"value": "var(--bg-neutral-dark-900)",
+					"value": "var(--bg-neutral-dark-950)",
 					"description": "Secondary action background color",
 					"usage": "Use for secondary buttons and less prominent actions",
 					"category": "background",
@@ -1145,7 +1145,7 @@
 					"group": "actions"
 				},
 				"success-background": {
-					"value": "var(--bg-forest-600)",
+					"value": "var(--bg-forest-500)",
 					"description": "Success action background color",
 					"usage": "Use for success states, confirmations, and positive actions",
 					"category": "background",
@@ -1158,19 +1158,19 @@
 					"group": "actions"
 				},
 				"success-foreground": {
-					"value": "var(--text-neutral-dark-50)",
+					"value": "var(--text-neutral-dark-1000)",
 					"description": "Text color for success action elements",
 					"category": "foreground",
 					"group": "actions"
 				},
 				"success-foreground-hover": {
-					"value": "var(--text-base-white)",
+					"value": "var(--text-base-black)",
 					"description": "Hover text color for success elements",
 					"category": "foreground",
 					"group": "actions"
 				},
 				"warning-background": {
-					"value": "var(--bg-amber-600)",
+					"value": "var(--bg-amber-500)",
 					"description": "Warning action background color",
 					"usage": "Use for warning states and cautionary actions",
 					"category": "background",
@@ -1183,13 +1183,13 @@
 					"group": "actions"
 				},
 				"warning-foreground": {
-					"value": "var(--text-neutral-dark-50)",
+					"value": "var(--text-neutral-dark-1000)",
 					"description": "Text color for warning action elements",
 					"category": "foreground",
 					"group": "actions"
 				},
 				"warning-foreground-hover": {
-					"value": "var(--text-base-white)",
+					"value": "var(--text-base-black)",
 					"description": "Hover text color for warning elements",
 					"category": "foreground",
 					"group": "actions"
@@ -1232,13 +1232,13 @@
 					"group": "surface-levels"
 				},
 				"l2-background-transparent": {
-					"value": "color-mix(in srgb, var(--bg-neutral-dark-900), transparent 100%)",
+					"value": "color-mix(in srgb, var(--bg-neutral-dark-950), transparent 100%)",
 					"description": "",
 					"category": "background",
 					"group": "surface-levels"
 				},
 				"l2-background-60": {
-					"value": "color-mix(in srgb, var(--bg-neutral-dark-900), transparent 40%)",
+					"value": "color-mix(in srgb, var(--bg-neutral-dark-950), transparent 40%)",
 					"description": "",
 					"category": "background",
 					"group": "surface-levels"
