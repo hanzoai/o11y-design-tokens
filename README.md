@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="o11y-design-tokens" width="880"></p>
+
 # @signozhq/design-tokens
 
 Welcome to the `@signozhq/design-tokens` package! This package provides a set of design tokens that can be used across your projects to maintain consistency in design and styling.
