@@ -17,7 +17,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g pnpm
+      # pnpm is already on the node toolchain image; corepack pins it to the
+      # version the lockfile was written with.
+      - run: corepack enable pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint
       # The tokens are generated from JSON, so regenerate before building:
