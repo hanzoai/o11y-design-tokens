@@ -1,65 +1,65 @@
 {
-	"name": "@signozhq/design-tokens",
-	"version": "2.1.1",
-	"type": "module",
-	"main": "./dist/design-tokens.js",
-	"module": "./dist/design-tokens.js",
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "vite build",
-		"dev": "vite build --watch",
-		"clean": "rm -rf dist node_modules",
-		"update-version": "changeset && changeset version",
-		"release": "pnpm build && changeset publish",
-		"prepare": "husky install",
-		"lint": "eslint . --config eslint.config.js",
-		"format": "prettier --write .",
-		"pre-commit": "lint-staged",
-		"generate-tokens": "tsx ./scripts/generate-types-from-json.ts && style-dictionary build && tsx ./scripts/generate-semantic-tokens.ts && tsx ./scripts/generate-typography-styles.ts"
-	},
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"eslint --fix",
-			"prettier --write"
-		],
-		"*.{json,md,yml}": [
-			"prettier --write"
-		]
-	},
-	"devDependencies": {
-		"@changesets/cli": "^2.27.8",
-		"@commitlint/cli": "^19.5.0",
-		"@commitlint/config-conventional": "^19.5.0",
-		"@eslint/js": "^8.0.0",
-		"@types/node": "^22.5.5",
-		"@typescript-eslint/eslint-plugin": "^8.0.0",
-		"@typescript-eslint/parser": "^8.0.0",
-		"cssnano": "^7.0.6",
-		"eslint": "^9.12.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-prettier": "^5.0.0",
-		"husky": "^8.0.0",
-		"lint-staged": "^15.2.10",
-		"postcss": "^8.4.47",
-		"prettier": "^3.0.0",
-		"style-dictionary": "3.8.0",
-		"tsx": "^4.19.1",
-		"typescript": "^5.3.3",
-		"vite": "^5.4.19",
-		"vite-plugin-dts": "^4.3.0"
-	},
-	"resolutions": {
-		"cross-spawn": "7.0.5",
-		"esbuild": "^0.25.0",
-		"@babel/runtime": "7.26.10",
-		"brace-expansion": "2.0.2",
-		"@eslint/plugin-kit": "^0.3.4",
-		"tmp": "0.2.4"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@signozhq/design-tokens",
+  "version": "2.1.1",
+  "type": "module",
+  "main": "./dist/design-tokens.js",
+  "module": "./dist/design-tokens.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rm -rf dist node_modules",
+    "update-version": "changeset && changeset version",
+    "release": "pnpm build && changeset publish",
+    "prepare": "husky install",
+    "lint": "eslint . --config eslint.config.js",
+    "format": "prettier --write .",
+    "pre-commit": "lint-staged",
+    "generate-tokens": "tsx ./scripts/generate-types-from-json.ts && style-dictionary build && tsx ./scripts/generate-semantic-tokens.ts && tsx ./scripts/generate-typography-styles.ts"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.1",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "26.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.68.0",
+    "@typescript-eslint/parser": "^8.68.0",
+    "cssnano": "^9.0.1",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.4.1",
+    "postcss": "^8.5.26",
+    "prettier": "^3.9.6",
+    "style-dictionary": "^5.5.2",
+    "tsx": "^4.23.12",
+    "typescript": "7.0.2",
+    "vite": "^8.2.2",
+    "vite-plugin-dts": "^5.0.3"
+  },
+  "resolutions": {
+    "cross-spawn": "7.0.5",
+    "esbuild": "^0.25.0",
+    "@babel/runtime": "7.26.10",
+    "brace-expansion": "2.0.2",
+    "@eslint/plugin-kit": "^0.3.4",
+    "tmp": "0.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
